@@ -24,8 +24,9 @@ function handlerItemClick(evt) {
     if (evt.target === evt.currentTarget) {
         return;
     }
-   
+ 
     const source = evt.target.dataset.source;
+   
     const galleryItem = galleryItems.find(({ original }) => original === source);   
     
     const instance = basicLightbox.create(`

@@ -23,12 +23,13 @@ function handlerItemClick(evt) {
     if (evt.target === evt.currentTarget) {
         return;
     }
-  console.dir(evt.target);
-    const itemLink= evt.target.src;
+  
+    const itemLink = evt.target.src;    
     const galleryItem = galleryItems.find(({ preview }) => preview === itemLink);   
+   
     var lightbox = new SimpleLightbox('.gallery a', { 
         captionsData: "alt",        
         captionDelay: 250 
      });
-    console.dir(lightbox);
+    
 };
