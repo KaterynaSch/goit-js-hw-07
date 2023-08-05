@@ -12,24 +12,8 @@ function createItems(arr) {
 }
 container.insertAdjacentHTML("beforeend", createItems(galleryItems));
 
-container.addEventListener('click', handlerItemClick);
-
-const img = document.querySelector(".gallery__image");
-
-
-function handlerItemClick(evt) {    
-    evt.preventDefault();
-
-    if (evt.target === evt.currentTarget) {
-        return;
-    }
-  
-    const itemLink = evt.target.src;    
-    const galleryItem = galleryItems.find(({ preview }) => preview === itemLink);   
    
-    var lightbox = new SimpleLightbox('.gallery a', { 
-        captionsData: "alt",        
-        captionDelay: 250 
-     });
-    
-};
+var lightbox = new SimpleLightbox('.gallery a', { 
+    captionsData: "alt",        
+    captionDelay: 250 
+    });
